@@ -21,40 +21,41 @@ def fun_triangle(height:int):
     # read the test for your clue .
     triangle = ""
     for i in range(1, height+1):
+        rows = ""
         for j in range(1, i+1):
-            triangle += f"{i * j} "
-        triangle += "\n"
-    final_t = triangle.rstrip()
-    print(final_t)          
-            
+            rows += (str(i * j)) + " "
+        triangle = rows
+        print(triangle)        
+
+     
 def fun_triangle_upside_down(height:int):
     triangle = ""
     for i in range(1, height+1):
-        rows = []
         count = height + 2
+        rows = ""
         for j in range(1, count-i):
-            rows.append(str(j*i))
-        triangle += " ".join(rows) + "\n"
-  
-    print(triangle)
-fun_triangle(5)
+            rows += (str(j*i)) + " "
+        triangle = rows
+        print(triangle)
+
+
 def im_a_hill_kinda(height:int):
     # hint: fusion ??or look at test ,look above.
     triangle = ""
     for i in range(1, height+1):
-        rows = []
+        rows = ""
         for j in range(1, i+1):
-            rows.append(str(j*i))
-        triangle += " ".join(rows) + "\n"
+            rows += str(j*i) + " "
+        triangle = rows
+        print(triangle)
         
     for i in range(1, height+1):
-        rows = []
+        rows = ""
         count = height + 2
         for j in range(1, count-i):
-            rows.append(str(j*i))
-        triangle += " ".join(rows) + "\n"
-  
-    print(triangle)
+            rows += str(j*i) + " "
+        triangle = rows
+        print(triangle)
     
 # Question 3
 def fizz_buzz(num:int):
